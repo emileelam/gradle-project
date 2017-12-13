@@ -11,6 +11,9 @@ public class HelloWorldConfiguration extends Configuration {
     @NotEmpty
     private String defaultName = "Stranger";
 
+    @NotEmpty
+    private String test = "TESTING";
+
     @JsonProperty
     public String getTemplate() {
         return template;
@@ -29,5 +32,15 @@ public class HelloWorldConfiguration extends Configuration {
     @JsonProperty
     public void setDefaultName(String name) {
         this.defaultName = name;
+    }
+
+    @JsonProperty
+    public String getTest() {
+        return test;
+    }
+
+    @JsonProperty
+    public void setTest(String result) {
+        this.test = result;
     }
 }

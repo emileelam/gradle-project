@@ -2,6 +2,7 @@ package com.example;
 
 import com.example.health.TemplateHealthCheck;
 import com.example.resources.HelloWorldResource;
+import com.example.resources.PrimeNumberResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -32,10 +33,14 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
                 configuration.getTemplate(),
                 configuration.getDefaultName()
         );
+        final PrimeNumberResource resource1 = new PrimeNumberResource(
+                configuration.getTest()
+        );
         // Create new instance of healthCheck with appropriate params and add to Environment
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck(configuration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
         environment.jersey().register(resource);
+        environment.jersey().register(resource1);
     }
 }

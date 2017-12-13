@@ -19,6 +19,7 @@ public class HelloWorldResource {
     private final String template;
     private final String defaultName;
     private final AtomicLong counter;
+    private boolean primeNo;
 
     // Take two params, template is used to produce the saying
     // defaultName is used when the user declines to tell us their name
@@ -27,6 +28,7 @@ public class HelloWorldResource {
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
+        this.primeNo = primeNo;
     }
 
     @GET
@@ -36,6 +38,6 @@ public class HelloWorldResource {
     // If no name param in query sayHello with call Optional.absent()
     public Saying sayHello(@QueryParam("name")Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
-        return new Saying(counter.incrementAndGet(), value);
+        return new Saying(counter.incrementAndGet(), value, primeNo);
     }
 }

@@ -1,8 +1,8 @@
 package com.example;
-
-import cucumber.api.junit.Cucumber;
-import org.junit.runner.RunWith;
-
-@RunWith(Cucumber.class)
-public class RunCukesTest {
-}
+//
+//import cucumber.api.junit.Cucumber;
+//import org.junit.runner.RunWith;
+//
+//@RunWith(Cucumber.class)
+//public class RunCukesTest {
+//}
