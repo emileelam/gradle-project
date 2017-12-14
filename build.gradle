@@ -20,6 +20,8 @@ dependencies {
     testCompile group: 'org.mockito', name: 'mockito-core', version: '2.10.0'
     testCompile 'org.assertj:assertj-core:3.6.2'
     compile group: 'com.google.guava', name: 'guava', version: '22.0'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.25.1'
+    compile group: 'io.dropwizard', name: 'dropwizard-forms', version: '1.2.2'
 
 }
 
