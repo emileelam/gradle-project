@@ -1,8 +1,8 @@
 Feature: annotation
 
 Background:
-    User navigates to Facebook Given
-    I am on the Facebook login page
+    User navigates to Facebook 
+    Given I am on the Facebook login page
 
 Scenario:
     When I enter username as "Tom"
